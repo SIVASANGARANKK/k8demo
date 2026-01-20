@@ -60,7 +60,7 @@ stage('Deploy Project to K8s') {
 		bat '''
 		  minikube delete
 		  minikube start
-		  minikube image load deepikkaa20/myindiaproj:1.0
+		  minikube image load sivasangarankk/myindiaproj:1.0
           kubectl apply -f deployment.yaml
 		  kubectl apply -f services.yaml
 		  kubectl get pods
