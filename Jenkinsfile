@@ -17,13 +17,7 @@ pipeline {
         bat 'mvn clean test'
         
       }
-      post {
-        always {
-		  junit '**/target/surefire-reports/*.xml'
-          echo 'Test Run is SUCCESSFUL!'
-        }
-
-      }
+  
     }
     stage('Build Project') {
       steps {
