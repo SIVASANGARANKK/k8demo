@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: indiaproj-deployment
+  labels:
+    app: indiaproj
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: indiaproj
+  template:
+    metadata:
+      labels:
+        app: indiaproj
+    spec:
+      containers:
+        - name: indiaproj-container
+          image: sivasangarankk/java-mvn-demo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
